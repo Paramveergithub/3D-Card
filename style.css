@@ -1,0 +1,49 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  perspective: 200px;
+  background: linear-gradient(to bottom, #cc033c, #c647f8, #8cfd0b);
+}
+
+div{
+  height: 300px;
+  width: 300px;
+  cursor: pointer;
+}
+.wrapper{
+  height: 300px;
+  width: 300px;
+  position: relative;
+  margin: 50px auto;
+  transition-duration: 2s;
+  border: 5px solid rgb(0, 0, 0);
+  transform-style: preserve-3d;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+}
+.side-a, .side-b{
+  position: absolute;
+}
+.side-b{
+  transform: rotateY(180deg);
+  background-color: rgb(140, 169, 115);
+  text-align: center;
+}
+.side-a{
+  z-index: 10;
+  backface-visibility: hidden;
+}
+.wrapper:hover{
+  transform: rotateY(180deg);
+}
+
+.btn{
+  background-color: rgb(84, 80, 196);
+  cursor: pointer;
+}
